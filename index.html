@@ -4,10 +4,63 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-
+  <nav>
+    <ul>
+      <li><a href="#"></a>View Music</li>
+      <li><a href="#">Add Music</a></li>
+      <li><a href="#"></a>Profile</li>
+    </ul>
+  </nav>
+  <!-- created div for the form -->
+  <div class="form">
+  <!-- song length slider bar -->
+    <fieldset>
+      <legend>Song Length:</legend>
+      <input type="range" min="0" max="10" step".25" value="5" id="songLength">
+    </fieldset>
+    <!-- drop down list to choose an artist -->
+    <fieldset>
+      <legend>Artist:</legend>
+      <input name="artist" list="pickArtist" placeholder="Choose Artist">
+      <datalist id="pickArtist">
+        <option value="Pearl Jam">
+        <option value="Foo Fighters">
+        <option value="Incubus">
+        <option value="A Perfect Circle">
+        <option value="Cake">
+      </datalist>
+    </fieldset>
+    <!-- drop down list to choose an album -->
+    <fieldset>
+      <legend>Album:</legend>
+      <input name="album" list="pickAlbum" placeholder="Choose Album">
+      <datalist id="pickAlbum">
+        <option value="First Album">
+        <option value="Second Album">
+        <option value="Third Album">
+        <option value="Fourth Album">
+        <option value="Fifth Album">
+      </datalist>
+    </fieldset>
+    <!-- checkbox to choose genres of music -->
+    <fieldset>
+      <legend>Genre:</legend>
+      <input type="checkbox" name="rock">Rock</input>
+      <input type="checkbox" name="jazz">Jazz</input>
+      <input type="checkbox" name="punk">Punk</input>
+      <input type="checkbox" name="metal">Metal</input>
+      <input type="checkbox" name="swing">Swing</input>
+      <input type="checkbox" name="country">Country</input>
+    </fieldset>
+    <!-- filter button -->
+    <fieldset>
+    <input type="button" value="Filter"></input>
+    </fieldset>
+  </div>
 
 </body>
 </html>
