@@ -1,0 +1,23 @@
+body{
+  font-family: "Arial", "Serif";
+  border: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #FFB4B0;
+  border: 2px solid black;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li:not(:last-child):after {
+  content: " |";
+}
+
+nav li a:focus {
+  color: #000;
+  text-decoration: none;
+}
