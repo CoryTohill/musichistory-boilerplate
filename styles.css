@@ -6,8 +6,10 @@ body{
   font-family: "Arial", "Serif";
   border: 0;
   padding: 0;
+  font-size: 14px;
 }
 
+/*navigation bar styles*/
 nav {
   background-color: #FFB4B0;
   border: 2px solid black;
@@ -43,9 +45,12 @@ fieldset {
   width: 200px;
 }
 
-/*.genre{
-  padding: 0;
-}*/
+.legends {
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+/*checkbox stylings, placing into 2 columns*/
 
 #col1, #col2 {
   float: left;
@@ -60,19 +65,64 @@ padding: 0;
 
 #col1 ul li, #col2 ul li {
   padding: 5px 0;
+
 }
 
+/*border around checkboxes*/
+.genreType {
+  box-shadow: 0 0 0 2px black;
+  border-radius: 1px;
+}
+
+/*border around select list*/
 .songList {
   border: 2px solid black;
 }
 
+/*filter button stylings*/
 #filterButton {
   border: 2px solid black;
   font-size: 18px;
   padding: 0 35px;
   border-radius: 5px;
+  background-color: #d7d7d7;
 }
 
 .buttons {
   text-align: center;
+}
+
+.datalist {
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+
+/*song name div sizing and placement*/
+.songList {
+  background-color: #FEFAC0;
+  width: 600px;
+  height: 375px;
+  margin-left: 20px;
+}
+
+.songList ul li {
+  list-style: none;
+}
+
+.songList ul :nth-child(4n+1) {
+  font-size: 30px;
+  padding: 20px 0 10px;
+  color: #785616;
+}
+
+.songList ul :not(:nth-child(4n+1)) {
+  display: inline-block;
+}
+
+.songList ul :nth-child(4n+2):after,
+.songList ul :nth-child(4n+3):after {
+  content: " | ";
+  padding: 0 10px;
 }

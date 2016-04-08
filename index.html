@@ -25,7 +25,7 @@
     <!-- drop down list to choose an artist -->
     <fieldset>
       <legend class="legends">Artist:</legend>
-      <input name="artist" list="pickArtist" placeholder="Choose Artist">
+      <input  class="datalist" name="artist" list="pickArtist" placeholder="Options">
       <datalist id="pickArtist">
         <option value="Pearl Jam">
         <option value="Foo Fighters">
@@ -37,7 +37,7 @@
     <!-- drop down list to choose an album -->
     <fieldset>
       <legend class="legends">Album:</legend>
-      <input name="album" list="pickAlbum" placeholder="Choose Album">
+      <input class="datalist" name="album" list="pickAlbum" placeholder="Options">
       <datalist id="pickAlbum">
         <option value="First Album">
         <option value="Second Album">
@@ -46,21 +46,21 @@
         <option value="Fifth Album">
       </datalist>
     </fieldset>
-    <!-- checkbox to choose genres of music -->
+    <!-- checkbox to choose genres of music, placed in 2 divs to create two columns with css -->
     <fieldset class="genre">
       <legend class="legends">Genre:</legend>
         <div id="col1">
           <ul>
-            <li><input type="checkbox" name="rock" class"genreType">Rock</input></li>
-            <li><input type="checkbox" name="jazz" class"genreType">Jazz</input></li>
-            <li><input type="checkbox" name="punk" class"genreType">Punk</input></li>
+            <li><input type="checkbox" name="rock" class="genreType">Rock</input></li>
+            <li><input type="checkbox" name="jazz" class="genreType">Jazz</input></li>
+            <li><input type="checkbox" name="punk" class="genreType">Punk</input></li>
           </ul>
         </div>
         <div id="col2">
         <ul>
-          <li><input type="checkbox" name="metal" class"genreType">Metal</input></li>
-          <li><input type="checkbox" name="swing" class"genreType">Swing</input></li>
-          <li><input type="checkbox" name="country" class"genreType">Country</input></li>
+          <li><input type="checkbox" name="metal" class="genreType">Metal</input></li>
+          <li><input type="checkbox" name="swing" class="genreType">Swing</input></li>
+          <li><input type="checkbox" name="country" class="genreType">Country</input></li>
         </ul>
         </div>
       </ul>
@@ -70,38 +70,26 @@
     <input type="button" value="Filter" id="filterButton"></input>
     </fieldset>
   </div>
+  <!-- created div to list the song names with song info below -->
   <div class="songList">
-    <ul>
-      <li>Song Name
-        <ul>
-          <li>Artist name</li>
-          <li>Album name</li>
-          <li>Genre</li>
-        </ul></li>
-    </ul>
-    <ul>
-      <li>Song Name
-        <ul>
-          <li>Artist name</li>
-          <li>Album name</li>
-          <li>Genre</li>
-        </ul></li>
-    </ul>
-    <ul>
-      <li>Song Name
-        <ul>
-          <li>Artist name</li>
-          <li>Album name</li>
-          <li>Genre</li>
-        </ul></li>
-    </ul>
-    <ul>
-      <li>Song Name
-        <ul>
-          <li>Artist name</li>
-          <li>Album name</li>
-          <li>Genre</li>
-        </ul></li>
+    <ul class= "songName">
+      <li>Song Name</li>
+      <li>Artist name</li>
+      <li>Album name</li>
+      <li>Genre</li>
+      <li>Song Name</li>
+      <li>Artist name</li>
+      <li>Album name</li>
+      <li>Genre</li>
+      <li>Song Name</li>
+      <li>Artist name</li>
+      <li>Album name</li>
+      <li>Genre</li>
+      <li>Song Name</li>
+      <li>Artist name</li>
+      <li>Album name</li>
+      <li>Genre</li>
+
     </ul>
   </div>
 
