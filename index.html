@@ -19,12 +19,12 @@
   <div class="form">
   <!-- song length slider bar -->
     <fieldset>
-      <legend>Song Length:</legend>
+      <legend class="legends">Song Length:</legend>
       <input type="range" min="0" max="10" step".25" value="5" id="songLength">
     </fieldset>
     <!-- drop down list to choose an artist -->
     <fieldset>
-      <legend>Artist:</legend>
+      <legend class="legends">Artist:</legend>
       <input name="artist" list="pickArtist" placeholder="Choose Artist">
       <datalist id="pickArtist">
         <option value="Pearl Jam">
@@ -36,7 +36,7 @@
     </fieldset>
     <!-- drop down list to choose an album -->
     <fieldset>
-      <legend>Album:</legend>
+      <legend class="legends">Album:</legend>
       <input name="album" list="pickAlbum" placeholder="Choose Album">
       <datalist id="pickAlbum">
         <option value="First Album">
@@ -47,18 +47,27 @@
       </datalist>
     </fieldset>
     <!-- checkbox to choose genres of music -->
-    <fieldset>
-      <legend>Genre:</legend>
-      <input type="checkbox" name="rock">Rock</input>
-      <input type="checkbox" name="jazz">Jazz</input>
-      <input type="checkbox" name="punk">Punk</input>
-      <input type="checkbox" name="metal">Metal</input>
-      <input type="checkbox" name="swing">Swing</input>
-      <input type="checkbox" name="country">Country</input>
+    <fieldset class="genre">
+      <legend class="legends">Genre:</legend>
+        <div id="col1">
+          <ul>
+            <li><input type="checkbox" name="rock" class"genreType">Rock</input></li>
+            <li><input type="checkbox" name="jazz" class"genreType">Jazz</input></li>
+            <li><input type="checkbox" name="punk" class"genreType">Punk</input></li>
+          </ul>
+        </div>
+        <div id="col2">
+        <ul>
+          <li><input type="checkbox" name="metal" class"genreType">Metal</input></li>
+          <li><input type="checkbox" name="swing" class"genreType">Swing</input></li>
+          <li><input type="checkbox" name="country" class"genreType">Country</input></li>
+        </ul>
+        </div>
+      </ul>
     </fieldset>
     <!-- filter button -->
-    <fieldset>
-    <input type="button" value="Filter"></input>
+    <fieldset class="buttons">
+    <input type="button" value="Filter" id="filterButton"></input>
     </fieldset>
   </div>
   <div class="songList">

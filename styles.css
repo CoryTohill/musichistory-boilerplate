@@ -1,3 +1,7 @@
+* {
+  border-style: border-box;
+}
+
 body{
   font-family: "Arial", "Serif";
   border: 0;
@@ -7,10 +11,12 @@ body{
 nav {
   background-color: #FFB4B0;
   border: 2px solid black;
+  margin-bottom: 20px;
 }
 
 nav li {
   display: inline-block;
+  font-size: 15px;
 }
 
 nav li:not(:last-child):after {
@@ -20,4 +26,53 @@ nav li:not(:last-child):after {
 nav li a:focus {
   color: #000;
   text-decoration: none;
+}
+
+div {
+  display: inline-block;
+}
+
+fieldset {
+  border:0;
+}
+
+.form {
+  float: left;
+  background-color: #4DD7FA;
+  border: 2px solid black;
+  width: 200px;
+}
+
+/*.genre{
+  padding: 0;
+}*/
+
+#col1, #col2 {
+  float: left;
+  display: inline-block;
+  width: 50%;
+}
+
+#col1 ul, #col2 ul {
+list-style: none;
+padding: 0;
+}
+
+#col1 ul li, #col2 ul li {
+  padding: 5px 0;
+}
+
+.songList {
+  border: 2px solid black;
+}
+
+#filterButton {
+  border: 2px solid black;
+  font-size: 18px;
+  padding: 0 35px;
+  border-radius: 5px;
+}
+
+.buttons {
+  text-align: center;
 }
