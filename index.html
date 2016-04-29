@@ -11,8 +11,9 @@
   <nav>
     <ul>
       <li><a href="#">View Music</a></li>
-      <li><a href="addMusic">Add Music</a></li>
-      <li><a href="profile">Profile</a></li>
+      <li><a href="#" id="listMusicLink">List Music</a></li>
+      <li><a href="#" id="addMusicLink">Add Music</a></li>
+      <li><a href="#">Profile</a></li>
     </ul>
   </nav>
   <!-- created div for the form -->
@@ -72,7 +73,42 @@
   </div>
   <!-- created div to list the song names with song info below -->
   <div class="songList">
-    <ul class= "songName">
+
+    <section id="addMusic" class="hidden">
+      <div>
+        <p>Song name:</p>
+        <input type"text" name="song" class="inputInfo"></input>
+      </div>
+
+      <div>
+        <p>Artist:</p>
+        <input type"text" name="artist" class="inputInfo"></input>
+      </div>
+
+      <div>
+        <p>Album:</p>
+        <input type"text" name="album" class="inputInfo"></input>
+      </div>
+
+      <div>
+        <p>Genre:</p>
+        <input type"text" name="genre" class="inputInfo"></input>
+      </div>
+
+      <button type="button" id="addButton">Add</button>
+    </section>
+
+    <section id="listMusic">
+      <ul class= "songName visible" id="songElement">
+    </section>
+
+
+
+ <!-- <li>Song Name</li>
+      <li>Artist name</li>
+      <li>Album name</li>
+      <li>Genre</li>
+      <button type="button">Delete</button>
       <li>Song Name</li>
       <li>Artist name</li>
       <li>Album name</li>
@@ -84,14 +120,12 @@
       <li>Song Name</li>
       <li>Artist name</li>
       <li>Album name</li>
-      <li>Genre</li>
-      <li>Song Name</li>
-      <li>Artist name</li>
-      <li>Album name</li>
-      <li>Genre</li>
+      <li>Genre</li> -->
+
 
     </ul>
   </div>
 
+  <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

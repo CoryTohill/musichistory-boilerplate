@@ -1,0 +1,23 @@
+{
+  "songs": [
+    {
+      "title": "The Walk",
+      "artist": "Mayer Hawthorne",
+      "album": "How Do You Do",
+      "genre": "Blues"
+    },
+    {
+      "title": "Medicine",
+      "artist": "Grace Potter",
+      "album": "Grace Potter and the Nocturnals",
+      "genre": "Jazz"
+    },
+    {
+      "title": "Legs",
+      "artist": "ZZ Top",
+      "album": "Eliminator",
+      "genre": "Rock"
+    }
+  ]
+}
+
