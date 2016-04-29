@@ -1,3 +1,7 @@
+/************************************************************
+                    UNIVERSAL STYLINGS
+*************************************************************/
+
 * {
   border-style: border-box;
 }
@@ -9,7 +13,12 @@ body{
   font-size: 14px;
 }
 
-/*navigation bar styles*/
+
+
+/************************************************************
+                          NAV BAR
+*************************************************************/
+
 nav {
   background-color: #FFB4B0;
   border: 2px solid black;
@@ -50,7 +59,11 @@ fieldset {
   padding-top: 10px;
 }
 
-/*checkbox stylings, placing into 2 columns*/
+
+
+/************************************************************
+                        CHECKBOXES
+*************************************************************/
 
 #col1, #col2 {
   float: left;
@@ -68,7 +81,6 @@ padding: 0;
 
 }
 
-/*border around checkboxes*/
 .genreType {
   box-shadow: 0 0 0 2px black;
   border-radius: 1px;
@@ -79,7 +91,12 @@ padding: 0;
   border: 2px solid black;
 }
 
-/*filter button stylings*/
+
+
+/************************************************************
+                      FILTER BUTTON
+*************************************************************/
+
 #filterButton {
   border: 2px solid black;
   font-size: 18px;
@@ -99,7 +116,11 @@ padding: 0;
 }
 
 
-/*song name div sizing and placement*/
+
+/************************************************************
+                      SONG LIST
+*************************************************************/
+
 .songList {
   background-color: #FEFAC0;
   width: 600px;
@@ -111,18 +132,74 @@ padding: 0;
   list-style: none;
 }
 
-.songList ul :nth-child(4n+1) {
+.songList ul li:nth-of-type(4n+1) {
   font-size: 30px;
   padding: 20px 0 10px;
   color: #785616;
 }
 
-.songList ul :not(:nth-child(4n+1)) {
+.songList ul li:not(:nth-of-type(4n+1)) {
   display: inline-block;
 }
 
-.songList ul :nth-child(4n+2):after,
-.songList ul :nth-child(4n+3):after {
+.songList ul li:nth-of-type(4n+2):after,
+.songList ul li:nth-of-type(4n+3):after {
   content: " | ";
   padding: 0 10px;
+}
+
+#songElement div {
+  display: block;
+}
+
+
+/************************************************************
+                   HIDE AND SHOW ELEMENTS
+*************************************************************/
+
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+
+
+/************************************************************
+                        ADD MUSIC PAGE
+*************************************************************/
+
+
+#addMusic {
+  text-align: center;
+  padding-top: 15%;
+  width: 100%;
+}
+
+#addMusic div {
+display: block;
+text-align: center;
+}
+
+#addMusic div p {
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+}
+
+#addMusic div input {
+  border: 2px solid black;
+  padding-right: 20px;
+}
+
+#addButton {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 5px 25px;
+  border-radius: .5em;
+  border: 2px solid black;
+  margin-top: 40px;
 }
