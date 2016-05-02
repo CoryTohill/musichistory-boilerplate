@@ -1,0 +1,23 @@
+{
+  "songs": [
+    {
+      "title": "Hello",
+      "artist": "Hi",
+      "album": "Howdy",
+      "genre": "Wassup"
+    },
+    {
+      "title": "Bye",
+      "artist": "Goodbye",
+      "album": "See ya",
+      "genre": "Toodles"
+    },
+    {
+      "title": "Suck",
+      "artist": "A",
+      "album": "Fat",
+      "genre": "One"
+    }
+  ]
+}
+
