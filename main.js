@@ -1,37 +1,8 @@
 /************************************************************
-                INSERT SONG DATA VIA JSON FILE
+                      DELETE BUTTONS
 *************************************************************/
-var myRequest = new XMLHttpRequest();
 
-myRequest.open("GET", "songs.json");
-
-myRequest.send();
-
-myRequest.addEventListener("load", manipulateSongInfo);
-
-var songElement = document.getElementById("songElement");
-
-function manipulateSongInfo () {
-
-  var HTMLHolder = "";
-  var songsData = JSON.parse(this.responseText);
-
-  for(i = 0; i < songsData.songs.length; i++) {
-    HTMLHolder += `<div>`
-               +  `<li>${songsData.songs[i].title}</li>`
-               +  `<li>${songsData.songs[i].artist}</li>`
-               +  `<li>${songsData.songs[i].album}</li>`
-               +  `<li>${songsData.songs[i].genre}</li>`
-               +  `<button type="button" class="delete">Delete</button>`
-               +  `</div>`;
-  };
-
-  songElement.innerHTML = HTMLHolder;
-
-  deleteButtons();
-};
-
-function deleteButtons () {
+function deleteButtonsBehavior () {
   var deleteButton = document.getElementsByClassName("delete");
   for (i = 0; i < deleteButton.length; i++) {
   deleteButton[i].addEventListener("click", deleteSong);
@@ -40,6 +11,67 @@ function deleteButtons () {
     this.parentNode.parentNode.removeChild(this.parentNode);
   };
 };
+
+
+
+/************************************************************
+          ADD MORE SONGS IN JSON VIA MORE BUTTON
+*************************************************************/
+
+function moreButtonBehavior () {
+  var moreButton = document.getElementById("moreButton");
+  moreButton.addEventListener("click", addMoreSongs);
+
+  function addMoreSongs () {
+    var moreRequest = new XMLHttpRequest();
+    moreRequest.open("GET", "moreSongs.json");
+    moreRequest.send();
+    this.parentNode.removeChild(this);
+
+    moreRequest.addEventListener("load", manipulateSongInfo);
+  }
+
+}
+
+
+
+
+/************************************************************
+                INSERT SONG DATA VIA JSON FILE
+*************************************************************/
+
+var songElement = document.getElementById("songElement");
+var deleteButtonHTML = `<button type="button" class="delete">Delete</button>`;
+var moreButtonHTML = `<button type="button" id="moreButton">More</button>`;
+
+var myRequest = new XMLHttpRequest();
+myRequest.open("GET", "songs.json");
+myRequest.send();
+myRequest.addEventListener("load", manipulateSongInfo);
+
+function manipulateSongInfo () {
+  var HTMLBuilder = "";
+  var songsData = JSON.parse(this.responseText);
+
+  for(i = 0; i < songsData.songs.length; i++) {
+    HTMLBuilder += `<div>`
+               +  `<li>${songsData.songs[i].title}</li>`
+               +  `<li>${songsData.songs[i].artist}</li>`
+               +  `<li>${songsData.songs[i].album}</li>`
+               +  `<li>${songsData.songs[i].genre}</li>`
+               +  deleteButtonHTML
+               +  `</div>`;
+  };
+
+  songElement.innerHTML += HTMLBuilder + moreButtonHTML;
+
+  moreButtonBehavior();
+
+  deleteButtonsBehavior();
+};
+
+
+
 
 
 /************************************************************
@@ -52,15 +84,18 @@ var addButton = document.getElementById("addButton");
 addButton.addEventListener("click", addSong)
 
 function addSong (){
+  moreButton.parentNode.removeChild(moreButton);
   var holder = `<div>`;
 
   for(i = 0; i < inputInfo.length; i ++) {
     holder += `<li>${inputInfo[i].value}</li>`;
   };
-  holder += `<button type="button" class="delete">Delete</button></div>`;
-  songElement.innerHTML += holder;
+  holder += `${deleteButtonHTML}</div>`;
+  songElement.innerHTML += holder + moreButtonHTML;
 
-  deleteButtons();
+  moreButtonBehavior();
+  deleteButtonsBehavior();
+  holder = "";
 }
 
 
